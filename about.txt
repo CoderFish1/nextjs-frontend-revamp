@@ -1,0 +1,1 @@
+Revamping changes to the nextjs frontend project with my changes
