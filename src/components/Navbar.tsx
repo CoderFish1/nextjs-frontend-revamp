@@ -23,7 +23,7 @@ const AppNavbar = () => {
   const navItems = [
     { name: "Home", link: "/" },
     { name: "Courses", link: "/courses" },
-    { name: "Contact", link: "/contacts" },
+    { name: "Contact", link: "/Contacts" },
   ];
 
   return (

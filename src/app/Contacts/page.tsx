@@ -1,48 +1,52 @@
-'use client';
-import React from 'react'
-import { Meteors } from '@/components/ui/meteors';
+"use client";
 
-export default function page() {
- return (
-    <div className="w-full flex justify-center mt-36">
-      <div className="relative w-full max-w-xl">
-        <div className="absolute inset-0 h-full w-full scale-[0.80] transform rounded-full bg-red-500 bg-gradient-to-r from-blue-500 to-teal-500 blur-3xl" />
-        <div className="relative flex h-full flex-col items-start justify-end overflow-hidden rounded-2xl border border-gray-800 bg-gray-900 px-4 py-8 shadow-xl">
-          <div className="mb-4 flex h-5 w-5 items-center justify-center rounded-full border border-gray-500">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="h-2 w-2 text-gray-300"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25"
-              />
-            </svg>
-          </div>
- 
-          <h1 className="relative z-50 mb-4 text-xl font-bold text-white">
-            Contact Us
+import React from "react";
+import { BackgroundBeams } from "@/components/ui/background-beams";
+
+export default function ContactPage() {
+  return (
+    <section className="relative min-h-screen w-full flex items-center justify-center bg-black overflow-hidden">
+
+      <BackgroundBeams />
+      <div className="relative z-10 w-full max-w-lg px-6">
+        <div className="rounded-2xl border border-white/10 bg-neutral-900/80 backdrop-blur-xl p-8 shadow-xl">
+
+          <h1 className="text-3xl font-serif font-semibold text-white">
+            Get in Touch
           </h1>
- 
-          <p className="relative z-50 mb-4 text-base font-normal text-slate-500">
-            I don&apos;t know what to write so I&apos;ll just paste something
-            cool here. One more sentence because lorem ipsum is just
-            unacceptable. Won&apos;t ChatGPT the shit out of this.
+
+          <p className="mt-3 text-sm text-neutral-400">
+            Have a question about courses, instructors, or schedules?
+            We’d love to hear from you.
           </p>
- 
-          <button className="rounded-lg border border-gray-500 px-4 py-1 text-gray-300">
-            click here
-          </button>
- 
-          {/* Meaty part - Meteor effect */}
-          <Meteors number={20} />
+
+          <form className="mt-8 space-y-4">
+            <input
+              type="text"
+              placeholder="Your name"
+              className="w-full rounded-lg bg-black/40 border border-white/10 px-4 py-3 text-sm text-white placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-white/20"
+            />
+            <input
+              type="email"
+              placeholder="Email address"
+              className="w-full rounded-lg bg-black/40 border border-white/10 px-4 py-3 text-sm text-white placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-white/20"
+            />
+            <textarea
+              placeholder="Your message"
+              rows={4}
+              className="w-full rounded-lg bg-black/40 border border-white/10 px-4 py-3 text-sm text-white placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-white/20"
+            />
+
+            <button
+              type="submit"
+              className="mt-4 inline-flex items-center justify-center rounded-lg bg-white px-5 py-3 text-sm font-medium text-black hover:bg-neutral-200 transition"
+            >
+              Send Message →
+            </button>
+          </form>
+
         </div>
       </div>
-    </div>
+    </section>
   );
 }

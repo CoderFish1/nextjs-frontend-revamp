@@ -1,94 +1,102 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <div className="h-auto w-full bg-black text-gray-400 relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-center">
-      <div>
-        <h1 className="mt-8 md:mt-6 lg:m-0 text-xl font-semibold text-white">
-          About us
-        </h1>
-        <p className="mb-4 mt-6">
-          Music School is a premier institution dedicated to teaching the art
-          and science of music. We nurture talent from the ground up, fostering
-          a vibrant community of musicians.
-        </p>
-      </div>
-      <div>
-        <h1 className="mt-8 md:mt-6 lg:m-0 text-xl font-semibold text-white">
-          Quick Links
-        </h1>
-        <ul className="mt-6">
-          <li>
-            <a
-              href="#"
-              className="hover:text-white transition-colors duration-300"
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="hover:text-white transition-colors duration-300"
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="hover:text-white transition-colors duration-300"
-            >
-              Courses
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="hover:text-white transition-colors duration-300"
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <h1 className="mt-8 md:mt-6 lg:m-0 text-xl font-semibold text-white">
-          Follow us
-        </h1>
-        <div className="flex flex-col mt-6">
-          <a
-            href="#"
-            className="hover:text-white transition-colors duration-300"
-          >
-            Facebook
-          </a>
-          <a
-            href="#"
-            className="hover:text-white transition-colors duration-300"
-          >
-            Twitter
-          </a>
-          <a
-            href="#"
-            className="hover:text-white transition-colors duration-300"
-          >
-            Instagram
-          </a>
+    <footer className="relative w-full bg-black border-t border-white/10 px-6 py-20">
+      
+      <div className="mx-auto max-w-7xl grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
+
+        {/* ABOUT */}
+        <div>
+          <h3 className="text-lg font-semibold text-white tracking-tight">
+            Music School
+          </h3>
+          <p className="mt-5 text-sm text-neutral-400 leading-relaxed">
+            A modern music academy dedicated to nurturing creativity,
+            technique, and confidence. Learn music the right way —
+            structured, inspiring, and personal.
+          </p>
         </div>
-      </div>
-      <div>
-        <h1 className="mt-8 md:mt-6 lg:m-0 text-xl font-semibold text-white">
-          Contact Us
-        </h1>
-        <div className="mt-6">
-          <p>New Delhi, India</p>
-          <p>Delhi 10001</p>
-          <p>Email: info@musicschool.com</p>
-          <p>Phone: (123) 456-7890</p>
+
+        {/* QUICK LINKS */}
+        <div>
+          <h4 className="text-sm font-semibold uppercase tracking-wider text-neutral-300">
+            Explore
+          </h4>
+          <ul className="mt-5 space-y-3 text-sm">
+            <li>
+              <Link href="/" className="hover:text-white transition">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/courses" className="hover:text-white transition">
+                Courses
+              </Link>
+            </li>
+            <li>
+              <Link href="/webinars" className="hover:text-white transition">
+                Webinars
+              </Link>
+            </li>
+            <li>
+              <Link href="/contacts" className="hover:text-white transition">
+                Contact
+              </Link>
+            </li>
+          </ul>
         </div>
+
+        {/* SOCIAL */}
+        <div>
+          <h4 className="text-sm font-semibold uppercase tracking-wider text-neutral-300">
+            Connect
+          </h4>
+          <ul className="mt-5 space-y-3 text-sm">
+            <li>
+              <a href="#" className="hover:text-white transition">
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-white transition">
+                Twitter / X
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-white transition">
+                YouTube
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-white transition">
+                Facebook
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        {/* CONTACT */}
+        <div>
+          <h4 className="text-sm font-semibold uppercase tracking-wider text-neutral-300">
+            Contact
+          </h4>
+          <div className="mt-5 space-y-2 text-sm text-neutral-400">
+            <p>New Delhi, India</p>
+            <p>Email: info@musicschool.com</p>
+            <p>Phone: +91 12345 67890</p>
+          </div>
+        </div>
+
       </div>
-    </div>
+
+      {/* BOTTOM BAR */}
+      <div className="mt-16 border-t border-white/10 pt-6 text-center text-xs text-neutral-500">
+        © {new Date().getFullYear()} Music School. All rights reserved.
+      </div>
+
+    </footer>
   );
 };
